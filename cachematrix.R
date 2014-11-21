@@ -34,8 +34,8 @@ cacheSolve <- function(x, ...) {
                 message("getting cached data")
                 return(result)
         }
-        data <- x$get()
+        data <- x$get() #Gets the complete original matrix
         result <- solve(data, ...)
-        x$setInverse(result)
+        x$setInverse(result) #Sets the value of solve(x) into the list.
         result
 }
